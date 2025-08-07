@@ -1,137 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zagros-OS</title>
-  <style>
-    /* Reset and basic styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #f5f5f5;
-      padding: 20px 0;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: normal;
-      font-size: 2.5rem;
-      color: #007acc;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
-      color: #555;
-    }
-    nav {
-      background: #007acc;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ff6600;
-    }
-    main {
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 0 15px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    section h2 {
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-      color: #007acc;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 20px 0;
-      border-top: 1px solid #ddd;
-      color: #777;
-      margin-top: 50px;
-    }
-    a.download-link {
-      display: inline-block;
-      background: #007acc;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    a.download-link:hover {
-      background: #005f99;
-    }
-  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Zagros-OS User Handbook</title>
+
+<style type="text/css">
+
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+h1 {
+  margin-top:5px;
+  color: #69A000;
+}
+
+h2 {
+  color: #69A000;
+}
+
+h3 {
+  margin-top:5px;
+  color: #69A000;
+}
+
+hr {
+  border: 0;
+  color: #69A000;
+  background-color: #69A000;
+  height: 3px;
+}
+
+pre {
+  background-color: #F0F0F0;
+  border: 5px solid #F0F0F0;
+  padding: 10px;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #0000F0;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #0000F0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  margin-left: -1ex;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  vertical-align: top;
+}
+
+.navpanel {
+  border: 1px solid black;
+  width: 160px;
+  padding: 10px;
+}
+
+.contentpanel {
+  padding: 10px 30px;
+  max-width: 700px;
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Zagros-OS</h1>
-  <p>Version: dev 0.1 — A simple assembly-based operating system</p>
-</header>
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<tr>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#features">Features</a>
-  <a href="#download">Download</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!-- NAVIGATION PANEL -->
+<td class="navpanel" valign="top">
 
-<main>
-  <section id="about">
-    <h2>About Zagros-OS</h2>
-    <p>Zagros-OS is a lightweight 32-bit operating system written mostly in assembly language. It is designed to be minimal, fast, and easy to understand — perfect for OS learners and developers.</p>
-  </section>
+<h3>Navigate</h3>
 
-  <section id="features">
-    <h2>Features</h2>
-    <ul>
-      <li>Simple VGA graphics mode</li>
-      <li>Keyboard input support</li>
-      <li>Minimal bootloader and kernel</li>
-      <li>Efficient memory usage (under 100 MB RAM)</li>
-      <li>Open-source and actively developed</li>
-    </ul>
-  </section>
+<p><strong>Getting Started</strong></p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#setup">Setup</a></li>
+</ul>
 
-  <section id="download">
-    <h2>Download</h2>
-    <p>Try Zagros-OS today! Run it on your favorite emulator like QEMU or VirtualBox.</p>
-    <a href="https://github.com/your-username/zagrosOS/releases" target="_blank" class="download-link">Download Latest Release</a>
-  </section>
+<p><strong>Usage</strong></p>
+<ul>
+<li><a href="#booting">Booting</a></li>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#programs">Programs</a></li>
+</ul>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Questions, contributions, or feedback? Feel free to reach out on <a href="https://github.com/your-username/zagrosOS" target="_blank">GitHub</a>.</p>
-  </section>
-</main>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="#help">Help</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-<footer>
-  &copy; 2025 Zagros-OS Project. All rights reserved.
-</footer>
+</td>
+
+<!-- MAIN CONTENT PANEL -->
+<td class="contentpanel" valign="top">
+
+<h1>The Zagros-OS User Handbook</h1>
+<h3>Version dev 0.1 — © 2025 Zagros-OS Developers</h3>
+
+<p>Welcome to the Zagros-OS user handbook. This guide will help you understand how to set up, boot, and use the Zagros operating system — a minimal assembly-based OS designed for learning and experimentation.</p>
+
+<p>Use the navigation links on the left to jump between sections.</p>
+
+<hr noshade="noshade" />
+
+<a name="overview"></a>
+<h2>Overview</h2>
+<p>Zagros-OS is a small 32-bit operating system written primarily in assembly language. It features a simple VGA interface and is designed for low resource consumption and easy modification.</p>
+
+<a name="requirements"></a>
+<h3>System Requirements</h3>
+<ul>
+  <li>Intel/AMD 32-bit or compatible CPU</li>
+  <li>At least 64 MB RAM (recommended 100 MB or less)</li>
+  <li>VGA-compatible display</li>
+  <li>QEMU, VirtualBox, or real PC for testing</li>
+</ul>
+
+<a name="setup"></a>
+<h3>Setup</h3>
+<p>To run Zagros-OS, download the latest floppy disk image or ISO file from the <a href="https://github.com/your-username/zagrosOS/releases" target="_blank">GitHub releases page</a>. You can boot the image in an emulator or write it to physical media.</p>
+
+<hr noshade="noshade" />
+
+<a name="booting"></a>
+<h2>Booting</h2>
+<p>Insert the floppy disk or USB key with the Zagros-OS image into your machine and boot from it. On emulators like QEMU, use the following command:</p>
+
+<pre>qemu-system-i386 -fda zagrosos.flp</pre>
+
+<p>If booting on real hardware, ensure BIOS boot order is set to your floppy/USB device.</p>
+
+<hr noshade="noshade" />
+
+<a name="commands"></a>
+<h2>Commands</h2>
+<p>Zagros-OS includes a minimal shell with basic commands:</p>
+<ul>
+  <li><strong>DIR</strong> — List files in current directory</li>
+  <li><strong>RUN &lt;filename&gt;</strong> — Run a binary program</li>
+  <li><strong>HELP</strong> — Display available commands</li>
+</ul>
+
+<hr noshade="noshade" />
+
+<a name="programs"></a>
+<h2>Programs</h2>
+<p>Included programs demonstrate simple functionality:</p>
+<ul>
+  <li><strong>EDIT.BIN</strong> — Text editor</li>
+  <li><strong>PONG.BIN</strong> — Simple Pong game</li>
+  <li><strong>CALC.BAS</strong> — Calculator written in BASIC</li>
+</ul>
+
+<hr noshade="noshade" />
+
+<a name="help"></a>
+<h2>Help</h2>
+<p>For questions or contributions, visit the <a href="https://github.com/your-username/zagrosOS" target="_blank">GitHub repository</a> or join our community forum.</p>
+
+<hr noshade="noshade" />
+
+<a name="license"></a>
+<h2>License</h2>
+<p>Zagros-OS is open source and released under a BSD-like license. See <strong>LICENSE.txt</strong> in the project archive for details.</p>
+
+<hr noshade="noshade" />
+
+<a name="contact"></a>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:contact@zagrosos.org">contact@zagrosos.org</a></p>
+
+</td>
+</tr>
+</table>
 
 </body>
 </html>
