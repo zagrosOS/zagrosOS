@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zagros-OS | Version dev 0.1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    header {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #58a6ff;
+    }
+    nav {
+      background-color: #21262d;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: #8b949e;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #58a6ff;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #161b22;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #6e7681;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zagros-OS</h1>
+    <p>Version: <strong>dev 0.1</strong></p>
+  </header>
+
+  <nav>
+    <a href="#welcome">Welcome</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+    <a href="#contribute">Contribute</a>
+  </nav>
+
+  <section id="welcome">
+    <h2>👋 Welcome</h2>
+    <p>Zagros-OS is a new 32-bit operating system written in Assembly, built from scratch for learning, speed, and full control.</p>
+  </section>
+
+  <section id="about">
+    <h2>🧠 About Zagros-OS</h2>
+    <p>This OS is under heavy development. The goal is to create a minimalist but powerful kernel using x86 Assembly and run directly on hardware.</p>
+    <p>Version <code>dev 0.1</code> is the first developer preview.</p>
+  </section>
+
+  <section id="features">
+    <h2>✨ Features</h2>
+    <ul>
+      <li>🖥️ VGA Graphics Mode (320x200)</li>
+      <li>🧾 Simple welcome screen</li>
+      <li>⌨️ Basic keyboard input (planned)</li>
+      <li>💾 Bare metal boot from floppy/ISO</li>
+      <li>🛠️ Written 100% in Assembly</li>
+    </ul>
+    <img src="vga-sample.png" alt="VGA Sample" style="width:100%; border-radius: 5px; margin-top: 10px;" />
+    <p style="font-size: 14px; color: #8b949e;">Above: Sample VGA welcome screen (simulated)</p>
+  </section>
+
+  <section id="download">
+    <h2>📦 Download</h2>
+    <p>You can try Zagros-OS in an emulator like QEMU or VirtualBox.</p>
+    <p><a href="https://github.com/your-username/zagros-os/releases" style="color:#58a6ff;">Download from GitHub Releases</a></p>
+  </section>
+
+  <section id="contribute">
+    <h2>🤝 Contribute</h2>
+    <p>Zagros-OS is open-source. Contributions are welcome!</p>
+    <p><a href="https://github.com/your-username/zagros-os" style="color:#58a6ff;">View the Source Code on GitHub</a></p>
+  </section>
+
+  <footer>
+    Made with 🧠 by Kurd – 2025
+  </footer>
+
+</body>
+</html>
