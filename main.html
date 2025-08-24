@@ -4,10 +4,9 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>The Zagros-OS User Handbook</title>
+<title>ZagrosOS 0.1.0indev</title>
 
 <style type="text/css">
-
 body {
   font-family: sans-serif;
   background-color: #ffffff;
@@ -15,16 +14,12 @@ body {
 }
 
 h1 {
-  margin-top:5px;
-  color: #69A000;
-}
-
-h2 {
+  margin-top: 5px;
   color: #69A000;
 }
 
 h3 {
-  margin-top:5px;
+  margin-top: 5px;
   color: #69A000;
 }
 
@@ -35,50 +30,10 @@ hr {
   height: 3px;
 }
 
-pre {
-  background-color: #F0F0F0;
-  border: 5px solid #F0F0F0;
-  padding: 10px;
-  overflow: auto;
-}
-
-a {
-  text-decoration: none;
-  color: #0000F0;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #0000F0;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-li {
-  margin-left: -1ex;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-td {
-  vertical-align: top;
-}
-
-.navpanel {
-  border: 1px solid black;
-  width: 160px;
-  padding: 10px;
-}
-
 .contentpanel {
-  padding: 10px 30px;
+  padding: 20px;
   max-width: 700px;
 }
-
 </style>
 </head>
 
@@ -86,113 +41,26 @@ td {
 
 <table border="0" cellpadding="10" cellspacing="0" width="100%">
 <tr>
-
-<!-- NAVIGATION PANEL -->
-<td class="navpanel" valign="top">
-
-<h3>Navigate</h3>
-
-<p><strong>Getting Started</strong></p>
-<ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#setup">Setup</a></li>
-</ul>
-
-<p><strong>Usage</strong></p>
-<ul>
-<li><a href="#booting">Booting</a></li>
-<li><a href="#commands">Commands</a></li>
-<li><a href="#programs">Programs</a></li>
-</ul>
-
-<p><strong>Resources</strong></p>
-<ul>
-<li><a href="#help">Help</a></li>
-<li><a href="#license">License</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</td>
-
-<!-- MAIN CONTENT PANEL -->
 <td class="contentpanel" valign="top">
 
-<h1>The Zagros-OS User Handbook</h1>
-<h3>Version dev 0.1 — © 2025 Zagros-OS Developers</h3>
-
-<p>Welcome to the Zagros-OS user handbook. This guide will help you understand how to set up, boot, and use the Zagros operating system — a minimal assembly-based OS designed for learning and experimentation.</p>
-
-<p>Use the navigation links on the left to jump between sections.</p>
+<h1>Welcome to ZagrosOS</h1>
+<h3>Version 0.1.0indev</h3>
 
 <hr noshade="noshade" />
 
-<a name="overview"></a>
-<h2>Overview</h2>
-<p>Zagros-OS is a small 32-bit operating system written primarily in assembly language. It features a simple VGA interface and is designed for low resource consumption and easy modification.</p>
-
-<a name="requirements"></a>
-<h3>System Requirements</h3>
-<ul>
-  <li>Intel/AMD 32-bit or compatible CPU</li>
-  <li>At least 64 MB RAM (recommended 100 MB or less)</li>
-  <li>VGA-compatible display</li>
-  <li>QEMU, VirtualBox, or real PC for testing</li>
-</ul>
-
-<a name="setup"></a>
-<h3>Setup</h3>
-<p>To run Zagros-OS, download the latest floppy disk image or ISO file from the <a href="https://github.com/your-username/zagrosOS/releases" target="_blank">GitHub releases page</a>. You can boot the image in an emulator or write it to physical media.</p>
-
-<hr noshade="noshade" />
-
-<a name="booting"></a>
-<h2>Booting</h2>
-<p>Insert the floppy disk or USB key with the Zagros-OS image into your machine and boot from it. On emulators like QEMU, use the following command:</p>
-
-<pre>qemu-system-i386 -fda zagrosos.flp</pre>
-
-<p>If booting on real hardware, ensure BIOS boot order is set to your floppy/USB device.</p>
-
-<hr noshade="noshade" />
-
-<a name="commands"></a>
-<h2>Commands</h2>
-<p>Zagros-OS includes a minimal shell with basic commands:</p>
-<ul>
-  <li><strong>DIR</strong> — List files in current directory</li>
-  <li><strong>RUN &lt;filename&gt;</strong> — Run a binary program</li>
-  <li><strong>HELP</strong> — Display available commands</li>
-</ul>
-
-<hr noshade="noshade" />
-
-<a name="programs"></a>
-<h2>Programs</h2>
-<p>Included programs demonstrate simple functionality:</p>
-<ul>
-  <li><strong>EDIT.BIN</strong> — Text editor</li>
-  <li><strong>PONG.BIN</strong> — Simple Pong game</li>
-  <li><strong>CALC.BAS</strong> — Calculator written in BASIC</li>
-</ul>
-
-<hr noshade="noshade" />
-
-<a name="help"></a>
-<h2>Help</h2>
-<p>For questions or contributions, visit the <a href="https://github.com/your-username/zagrosOS" target="_blank">GitHub repository</a> or join our community forum.</p>
-
-<hr noshade="noshade" />
-
-<a name="license"></a>
-<h2>License</h2>
-<p>Zagros-OS is open source and released under a BSD-like license. See <strong>LICENSE.txt</strong> in the project archive for details.</p>
-
-<hr noshade="noshade" />
-
-<a name="contact"></a>
-<h2>Contact</h2>
-<p>Email: <a href="mailto:contact@zagrosos.org">contact@zagrosos.org</a></p>
+<pre>
+; Copyright © 2025 ZagrosASM
+; 
+; This code is not allowed to be used for haram (forbidden) or
+; damaging purposes in Islam.
+; 
+; If you use or modify this code, you MUST keep this notice.
+; If your file has a top comment (like ; thank for Allah), do not remove it.
+; or in menu start up or system do not remove it.
+; Allah is the God of everything.
+; 
+; If you use my kernel code say at top of code Copyright © 2025 ZagrosASM
+</pre>
 
 </td>
 </tr>
@@ -200,3 +68,4 @@ td {
 
 </body>
 </html>
+
